@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { InputWithLabel } from "../components/ui/input-with-label";
 import { AppCheckbox } from "../components/ui/app-checkbox";
 import { Separator } from "../components/ui/separator";
@@ -7,6 +8,12 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 
 export const Login = () => {
+  const navigate = useNavigate();
+
+  const handleSignIn = () => {
+    navigate("/otp");
+  };
+
   return (
     <>
       <div className='flex flex-col gap-6 w-full max-w-md'>
@@ -37,7 +44,7 @@ export const Login = () => {
               label='Remember me'
             />
             <a
-              href='#'
+              href='/forgot-password'
               className='text-sm text-secondary'
             >
               Forgot Password?
@@ -47,6 +54,7 @@ export const Login = () => {
           <AppPrimaryButton
             size='lg'
             variant='secondary'
+            onClick={handleSignIn}
           >
             Sign In
           </AppPrimaryButton>
