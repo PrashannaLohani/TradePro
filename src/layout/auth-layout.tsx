@@ -30,7 +30,7 @@ const items = [
 export default function AuthLayout() {
   return (
     <div className='min-h-screen grid grid-cols-2'>
-      <div className='min-h-screen bg-secondary flex items-center px-14'>
+      <div className='min-h-screen bg-[#991f1f] flex items-center px-14'>
         <div className='flex flex-col gap-12'>
           <div className='space-y-8'>
             <div className='p-5 bg-gray-200/30 rounded-2xl w-fit'>
@@ -59,11 +59,12 @@ export default function AuthLayout() {
           </div>
         </div>
       </div>
-      <div className='min-h-screen bg-background p-6'>
-        <div className='sm:mx-auto sm:w-full'>
-          <div className='flex justify-end mb-4'>
-            <ThemeToggle />
-          </div>
+      <div className='max-h-[800px]'>
+        <div className='flex justify-end p-4'>
+          <ThemeToggle />
+        </div>
+
+        <div className='w-full min-h-[800px] flex justify-center items-center'>
           <Outlet />
         </div>
       </div>
